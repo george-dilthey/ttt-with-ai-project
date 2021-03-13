@@ -1,3 +1,39 @@
 #!/usr/bin/env ruby
 
 require_relative '../config/environment'
+
+
+
+
+
+def get_players
+    puts "How many players would you like to play with (0, 1 or 2)?"
+    while no_players = gets.chomp do
+        if [0,1,2].include?(no_players.to_i)
+            break
+        else
+            puts "Please enter a valid number (0, 1 or 2)."
+        end
+    end
+end
+
+def go_first
+    puts "Who should go first (1 or 2)?"
+    while first = gets.chomp do
+        if [1,2].include?(first.to_i)
+            break
+        else
+            puts "Please enter a valid number (1 or 2)."
+        end
+    end
+
+end
+
+puts "Welcome to tic tac toe!"
+get_players()
+go_first()
+
+
+
+
+
